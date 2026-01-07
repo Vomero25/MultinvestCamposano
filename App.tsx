@@ -171,7 +171,7 @@ const App: React.FC = () => {
                       <th className="p-5">Classe Premio</th>
                       <th className="p-5">Gestione Separata</th>
                       <th className="p-5">Linea (1-5 Anni)</th>
-                      <th className="p-5">Linea (Oltre 5 Anni)</th>
+                      <th className="p-5">{"Linea (Oltre 5 Anni)"}</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100 font-bold text-sm">
@@ -193,7 +193,15 @@ const App: React.FC = () => {
               <div className="overflow-x-auto no-scrollbar">
                 <table className="w-full text-left">
                   <thead className="bg-red-50 text-[10px] font-black uppercase text-red-400 tracking-widest">
-                    <tr><th className="p-5">Classe</th><th className="p-5">1 Anno</th><th className="p-5">2 Anno</th><th className="p-5">3 Anno</th><th className="p-5">4 Anno</th><th className="p-5">5 Anno</th><th className="p-5">Oltre 5 Anni</th></tr>
+                    <tr>
+                      <th className="p-5">Classe</th>
+                      <th className="p-5">1 Anno</th>
+                      <th className="p-5">2 Anno</th>
+                      <th className="p-5">3 Anno</th>
+                      <th className="p-5">4 Anno</th>
+                      <th className="p-5">5 Anno</th>
+                      <th className="p-5">Oltre 5 Anni</th>
+                    </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100 font-bold text-sm">
                     {CPP_CLASSES.map(c => (
