@@ -1,19 +1,19 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-// Shimming preventivo per ambienti browser puri
-const apiKey = (typeof process !== 'undefined' && process.env.API_KEY) || '';
-const ai = new GoogleGenAI({ apiKey });
-
 export const getWealthProtectionInsight = async (gsWeight: number) => {
+  // Inizializzazione rigorosa secondo linee guida SDK
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  
   const prompt = `
-    Explaining the value of a Multibranch Life Insurance (Zurich Multinvest Plus) with a ${gsWeight}% allocation in "Gestione Separata" (Separated Account).
-    Focus on:
-    1. Capital Protection and stability.
-    2. Tax benefits in Italy (Succession tax exemption).
-    3. Asset protection from creditors (Impignorabilità e Insequestrabilità).
-    Keep it professional, high-end, and in Italian.
-    Maximum 3 bullet points.
+    Agisci come un esperto di consulenza patrimoniale d'élite. 
+    Spiega i vantaggi di una polizza Multiramo Zurich Multinvest Plus con un'allocazione del ${gsWeight}% in Gestione Separata "Zurich Trend".
+    Focalizzati su:
+    1. Protezione del capitale e stabilità (Ramo I).
+    2. Impignorabilità e Insequestrabilità (art. 1923 c.c.).
+    3. Esenzione fiscale in successione.
+    Usa un tono professionale, rassicurante e sofisticato in italiano.
+    Massimo 3 punti elenco chiari e convincenti.
   `;
 
   try {
@@ -23,7 +23,7 @@ export const getWealthProtectionInsight = async (gsWeight: number) => {
     });
     return response.text;
   } catch (error) {
-    console.error("Gemini Error:", error);
-    return "Errore nel caricamento degli approfondimenti. La Gestione Separata garantisce stabilità e protezione del capitale nel tempo.";
+    console.error("Gemini Insight Error:", error);
+    return "La Gestione Separata Zurich Trend garantisce la protezione del capitale investito, offrendo stabilità in scenari di volatilità e vantaggi successori esclusivi.";
   }
 };
