@@ -24,6 +24,7 @@ export interface CalculationResult {
 export enum ProductTab {
   OVERVIEW = 'Home',
   SIMULATOR = 'Simulatore Bonus',
+  PROTECTION = 'Tutela e Casi Reali',
   TECHNICAL_SHEET = 'Caratteristiche Prodotto',
   FULL_SHEET = 'Scheda Tecnica Completa',
   COSTS = 'Costi e Penali'

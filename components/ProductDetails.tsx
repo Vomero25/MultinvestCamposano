@@ -23,9 +23,9 @@ const ProductDetails: React.FC = () => {
     {
       title: "Copertura Caso Morte",
       items: [
-        { label: "Incremento %", value: "Capitale maggiorato in base all'età: 18-65 anni (+10%), 66-70 (+5%), >70 (+1%)." },
+        { label: "Incremento %", value: "Capitale maggiorato per età: 18-65 anni (+10%), 66-70 (+5%), Oltre 70 (+1%)." },
         { label: "Massimale", value: "Maggiorazione massima pari a 200.000 €." },
-        { label: "Protezione Plus", value: "Entro il 5° anno: garantito il valore massimo tra premi versati (al netto riscatti) e valore polizza x 110%." }
+        { label: "Protezione Plus", value: "Entro il 5° anno: garantito il valore massimo tra premi versati e valore polizza x 110%." }
       ]
     },
     {
@@ -40,7 +40,7 @@ const ProductDetails: React.FC = () => {
       title: "Erogazioni Periodiche",
       description: "Opzione Decumulo per flussi di cassa costanti.",
       items: [
-        { label: "Requisito", value: "Attivabile con capitale investito nella Linea > 30.000 €." },
+        { label: "Requisito", value: "Attivabile con capitale investito nella Linea superiore a 30.000 €." },
         { label: "Piano Standard", value: "Erogazione annuale del 3% o 5% del valore dei premi; semestrale 1,5% o 2,5%." },
         { label: "Flessibilità", value: "Possibilità di sospendere o riattivare il piano in qualsiasi momento." }
       ]

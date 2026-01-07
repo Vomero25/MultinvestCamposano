@@ -45,8 +45,8 @@ const ProductTechnicalSheet: React.FC = () => {
     {
       category: "Prestazioni Caso Morte",
       details: [
-        { label: "Maggiorazione Standard", value: "Età < 65: +10% | 66-70: +5% | > 70: +1%. Max incremento 200.000 €." },
-        { label: "Garanzia Minima", value: "Entro 5° anno: Max tra premi versati e Valore Polizza x 110% (se età < 65)." }
+        { label: "Maggiorazione Standard", value: "Età inferiore a 65: +10% | 66-70: +5% | Oltre 70: +1%. Max incremento 200.000 €." },
+        { label: "Garanzia Minima", value: "Entro 5° anno: Massimo tra premi versati e Valore Polizza x 110% (se età inferiore a 65)." }
       ]
     }
   ];
