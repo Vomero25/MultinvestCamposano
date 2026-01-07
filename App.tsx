@@ -45,9 +45,7 @@ const App: React.FC = () => {
               <div className="w-11 h-11 bg-blue-900 rounded-2xl flex items-center justify-center text-white font-black text-2xl shadow-xl group-hover:rotate-6 transition-transform">Z</div>
               <div className="flex flex-col">
                  <h1 className="font-black text-xl text-blue-900 tracking-tighter leading-none">Zurich Multinvest Plus</h1>
-                 <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest mt-0.5">
-                   editing: <span className="text-blue-900">Raffaele Camposano Gruppo Vomero</span>
-                 </span>
+                 <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest mt-1 text-blue-400">Advisor Platform</span>
               </div>
             </div>
             
@@ -67,7 +65,7 @@ const App: React.FC = () => {
             </nav>
 
             <div className="hidden lg:block text-right">
-               <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest block">Version 4.4.0</span>
+               <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest block">Version 4.3.0</span>
                <span className="text-[9px] font-bold text-blue-400 uppercase italic">Powering Advisors</span>
             </div>
           </div>
@@ -95,16 +93,16 @@ const App: React.FC = () => {
             <div className="bg-blue-900 rounded-[40px] sm:rounded-[60px] p-10 sm:p-24 text-white relative overflow-hidden shadow-3xl border-b-8 border-blue-950">
                <div className="relative z-10 max-w-4xl">
                   <span className="bg-amber-400 text-blue-900 px-5 py-1.5 rounded-full text-[11px] font-black uppercase tracking-[0.2em] mb-8 inline-block shadow-lg">Esclusivo Advisor</span>
-                  <h2 className="text-5xl sm:text-8xl font-black mb-8 leading-[0.9] tracking-tighter italic text-white drop-shadow-2xl">Solidità & Efficienza.</h2>
+                  <h2 className="text-5xl sm:text-8xl font-black mb-8 leading-[0.9] tracking-tighter italic">Efficienza Multiramo.</h2>
                   <p className="text-xl sm:text-2xl text-blue-100 mb-12 leading-relaxed font-medium opacity-90 max-w-2xl">
-                    Sfrutta la potenza combinata di Zurich Trend e dei mercati globali in un'unica soluzione d'investimento multiramo.
+                    Sfrutta la potenza combinata di Zurich Trend e dei mercati globali in un'unica soluzione d'investimento.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
                      <button 
                        onClick={() => setActiveTab(ProductTab.SIMULATOR)} 
                        className="bg-white text-blue-900 px-10 py-5 rounded-2xl font-black text-lg shadow-2xl hover:bg-blue-50 transition-all hover:scale-105 active:scale-95"
                      >
-                       Simula Proiezione Bonus
+                       Vai al Simulatore
                      </button>
                      <div className="flex flex-col gap-1 border-l-2 border-white/20 pl-6">
                         <span className="text-[10px] font-black text-blue-300 uppercase tracking-widest">Campagna Attiva</span>
@@ -140,16 +138,16 @@ const App: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div className="space-y-6">
                       <div className="flex items-center gap-6 p-6 bg-slate-50 rounded-3xl border border-slate-100">
-                        <div className="w-16 h-16 bg-blue-900 rounded-2xl flex items-center justify-center text-white text-2xl font-black shadow-lg">C</div>
+                        <div className="w-16 h-16 bg-blue-900 rounded-2xl flex items-center justify-center text-white text-2xl font-black">C</div>
                         <div><p className="text-[11px] font-black text-blue-600 uppercase mb-1">Contraente</p><p className="text-lg font-bold">Persona Fisica o Giuridica</p></div>
                       </div>
                       <div className="flex items-center gap-6 p-6 bg-slate-50 rounded-3xl border border-slate-100">
-                        <div className="w-16 h-16 bg-sky-500 rounded-2xl flex items-center justify-center text-white text-2xl font-black shadow-lg">A</div>
+                        <div className="w-16 h-16 bg-sky-500 rounded-2xl flex items-center justify-center text-white text-2xl font-black">A</div>
                         <div><p className="text-[11px] font-black text-sky-600 uppercase mb-1">Assicurato</p><p className="text-lg font-bold">Età 18-85 anni</p></div>
                       </div>
                     </div>
-                    <div className="bg-blue-50/50 p-10 rounded-[40px] border border-blue-100 flex items-center italic text-xl text-slate-700 font-medium leading-relaxed">
-                       "Zurich Multinvest Plus fonde la protezione del capitale tipica del Ramo I con la dinamicità dei mercati unit-linked."
+                    <div className="bg-blue-50/50 p-10 rounded-[40px] border border-blue-100 flex items-center italic text-xl text-slate-700">
+                       "Multinvest Plus è la soluzione Zurich che fonde protezione del capitale e spinta dei mercati unit-linked."
                     </div>
                   </div>
                 )}
@@ -171,8 +169,9 @@ const App: React.FC = () => {
                     </div>
                   </div>
                 )}
+                {/* Fallback per tab semplificati */}
                 {!['SOGGETTI', 'PREMI'].includes(homeFeatureTab) && (
-                   <div className="p-20 text-center text-slate-300 font-black uppercase tracking-[0.3em]">Sezione {homeFeatureTab} disponibile nelle schede tecniche</div>
+                   <div className="p-20 text-center text-slate-300 font-black uppercase tracking-[0.3em]">Sezione {homeFeatureTab} disponibile nel menu tecnico</div>
                 )}
               </div>
             </div>
@@ -189,7 +188,7 @@ const App: React.FC = () => {
                  <span>←</span> Home
                </button>
                <div className="text-right">
-                  <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block leading-tight">Configurazione</span>
+                  <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block">Configurazione</span>
                   <span className="text-xl font-black text-blue-900 italic">Classe CPP {activeCPP}</span>
                </div>
             </div>
@@ -197,7 +196,7 @@ const App: React.FC = () => {
             <div className="grid grid-cols-1 xl:grid-cols-3 gap-10">
               <div className="xl:col-span-1 bg-white p-8 sm:p-12 rounded-[40px] border border-slate-200 shadow-xl space-y-10">
                 <div className="space-y-6">
-                   <h3 className="text-2xl font-black text-blue-900 tracking-tighter italic">Personalizzazione</h3>
+                   <h3 className="text-2xl font-black text-blue-900 tracking-tighter italic">Input Simulazione</h3>
                    <div className="flex gap-2">
                       {['A', 'B', 'C'].map((id) => (
                         <button
@@ -214,12 +213,12 @@ const App: React.FC = () => {
                 </div>
 
                 <div className="space-y-4">
-                  <label className="text-[11px] font-black text-slate-500 uppercase tracking-widest">Premio Iniziale (€)</label>
+                  <label className="text-[11px] font-black text-slate-500 uppercase tracking-widest">Investimento Iniziale (€)</label>
                   <input 
                     type="number" step="5000"
                     value={simState.initialPremium}
                     onChange={(e) => setSimState({...simState, initialPremium: Number(e.target.value)})}
-                    className="w-full bg-slate-50 border-2 border-slate-200 rounded-[25px] px-8 py-5 focus:border-blue-900 outline-none font-black text-3xl text-blue-900 transition-all"
+                    className="w-full bg-slate-50 border-2 border-slate-200 rounded-[25px] px-8 py-5 focus:border-blue-900 outline-none font-black text-3xl text-blue-900"
                   />
                 </div>
 
@@ -258,12 +257,13 @@ const App: React.FC = () => {
                     onChange={(e) => setSimState({...simState, expectedReturnLG: Number(e.target.value)})}
                     className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-500"
                   />
+                   <p className="text-[9px] text-slate-400 font-bold uppercase text-center mt-2 italic">Range dinamico: -15% / +30%</p>
                 </div>
 
                 <div className="space-y-6 pt-6 border-t border-slate-100">
                    <div className="flex justify-between font-black text-[10px] uppercase text-slate-400 tracking-widest">
                       <span>Asset Allocation</span>
-                      <span className="text-blue-900 font-black">{simState.gestioneSeparataWeight}% GS</span>
+                      <span className="text-blue-900">{simState.gestioneSeparataWeight}% GS</span>
                    </div>
                    <input 
                     type="range" min="10" max="90" step="1"
@@ -278,8 +278,8 @@ const App: React.FC = () => {
                     <label className="flex items-center gap-5 cursor-pointer">
                       <input type="checkbox" checked={simState.applyCampaignBonus} onChange={(e) => setSimState({...simState, applyCampaignBonus: e.target.checked})} className="w-6 h-6 rounded-lg text-blue-900" />
                       <div className="flex flex-col">
-                        <span className="text-sm font-black text-blue-900 uppercase">Bonus Campagna</span>
-                        <span className="text-[10px] text-blue-600 font-bold uppercase tracking-widest">+1.0% Iniziale + Fedeltà</span>
+                        <span className="text-sm font-black text-blue-900 uppercase">Campagna 2025/26</span>
+                        <span className="text-[10px] text-blue-600 font-bold uppercase">Bonus +1.0% Iniziale</span>
                       </div>
                     </label>
                   </div>
@@ -289,8 +289,8 @@ const App: React.FC = () => {
                       <label className="flex items-center gap-5 cursor-pointer">
                         <input type="checkbox" checked={simState.applySacrificeBonus} onChange={(e) => setSimState({...simState, applySacrificeBonus: e.target.checked})} className="w-6 h-6 rounded-lg text-amber-600" />
                         <div className="flex flex-col">
-                          <span className="text-sm font-black text-amber-900 uppercase">Extra Sacrifice CF</span>
-                          <span className="text-[10px] text-amber-600 font-bold uppercase tracking-widest">+ {SACRIFICE_BONUS_RATE}% Premio Lordo</span>
+                          <span className="text-sm font-black text-amber-900 uppercase">Sacrifice CF</span>
+                          <span className="text-[10px] text-amber-600 font-bold uppercase">Bonus Extra +{SACRIFICE_BONUS_RATE}%</span>
                         </div>
                       </label>
                     </div>
@@ -331,7 +331,7 @@ const App: React.FC = () => {
             </div>
 
             <div className="bg-white p-10 rounded-[40px] border border-slate-200 shadow-xl overflow-hidden">
-              <h3 className="text-2xl font-black text-red-600 mb-8 italic uppercase tracking-tighter">Penali di Riscatto Totale</h3>
+              <h3 className="text-2xl font-black text-red-600 mb-8 italic uppercase tracking-tighter">Penali di Riscatto</h3>
               <div className="overflow-x-auto no-scrollbar">
                 <table className="w-full text-left">
                   <thead className="bg-red-50 text-[10px] font-black uppercase text-red-400 tracking-widest">
@@ -346,7 +346,7 @@ const App: React.FC = () => {
                         <td className="p-5 text-red-600">{c.penalties.y3.toFixed(2)}%</td>
                         <td className="p-5 text-red-600">{c.penalties.y4.toFixed(2)}%</td>
                         <td className="p-5 text-red-600">{c.penalties.y5.toFixed(2)}%</td>
-                        <td className="p-5 text-green-600 font-black">Azzerata</td>
+                        <td className="p-5 text-green-600 font-black">0.00%</td>
                       </tr>
                     ))}
                   </tbody>
@@ -357,20 +357,9 @@ const App: React.FC = () => {
         )}
       </main>
 
-      <footer className="bg-slate-900 text-white py-24 mt-auto border-t-[20px] border-blue-900">
-         <div className="max-w-7xl mx-auto px-4 flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-blue-900 font-black text-4xl mb-12 shadow-3xl">Z</div>
-            <h4 className="text-xl font-black mb-2 uppercase tracking-tight">Zurich Multinvest Plus</h4>
-            <p className="text-slate-400 font-black text-[11px] uppercase tracking-[0.4em] mb-8">
-              editing: <span className="text-white">Raffaele Camposano Gruppo Vomero</span>
-            </p>
-            <div className="w-24 h-px bg-slate-800 mb-8"></div>
-            <div className="flex flex-wrap justify-center gap-8 opacity-40 text-[9px] font-black uppercase tracking-widest">
-               <span>Compliance Verified 2025</span>
-               <span>Vercel Deploy Certified</span>
-               <span>Advisor Platform v4.4</span>
-            </div>
-         </div>
+      <footer className="bg-slate-900 text-white py-20 mt-auto border-t-[20px] border-blue-900 text-center">
+         <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-blue-900 font-black text-4xl mb-10 shadow-3xl mx-auto">Z</div>
+         <p className="text-slate-500 font-black text-[11px] uppercase tracking-[0.4em]">Zurich Multinvest Plus | Advisor 2025</p>
       </footer>
     </div>
   );
