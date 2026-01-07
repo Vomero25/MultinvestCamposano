@@ -1,0 +1,5 @@
+{
+  "name": "Zurich Multinvest Plus Simulator",
+  "description": "An interactive simulator for Zurich Multinvest Plus, featuring portfolio composition analysis, bonus calculations, and wealth protection scenarios.",
+  "requestFramePermissions": []
+}
