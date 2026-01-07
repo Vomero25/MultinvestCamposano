@@ -1,7 +1,9 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Shimming preventivo per ambienti browser puri
+const apiKey = (typeof process !== 'undefined' && process.env.API_KEY) || '';
+const ai = new GoogleGenAI({ apiKey });
 
 export const getWealthProtectionInsight = async (gsWeight: number) => {
   const prompt = `

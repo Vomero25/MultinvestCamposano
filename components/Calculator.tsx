@@ -1,7 +1,7 @@
 
 import React, { useMemo } from 'react';
-import { SimulationState } from '../types';
-import { ZURICH_COLORS, CPP_CLASSES, PRODUCT_SPECS, SACRIFICE_BONUS_RATE } from '../constants';
+import { SimulationState } from '../types.ts';
+import { ZURICH_COLORS, CPP_CLASSES, PRODUCT_SPECS, SACRIFICE_BONUS_RATE } from '../constants.ts';
 import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, Legend } from 'recharts';
 
 interface Props {

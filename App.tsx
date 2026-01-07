@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { SimulationState, ProductTab } from './types';
-import { ZURICH_COLORS, CPP_CLASSES, PRODUCT_SPECS, CAMPAIGN_DATES, SACRIFICE_BONUS_RATE } from './constants';
-import Calculator from './components/Calculator';
-import ProductDetails from './components/ProductDetails';
-import ProductTechnicalSheet from './components/ProductTechnicalSheet';
-import { getWealthProtectionInsight } from './services/geminiService';
+import { SimulationState, ProductTab } from './types.ts';
+import { ZURICH_COLORS, CPP_CLASSES, PRODUCT_SPECS, CAMPAIGN_DATES, SACRIFICE_BONUS_RATE } from './constants.ts';
+import Calculator from './components/Calculator.tsx';
+import ProductDetails from './components/ProductDetails.tsx';
+import ProductTechnicalSheet from './components/ProductTechnicalSheet.tsx';
+import { getWealthProtectionInsight } from './services/geminiService.ts';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ProductTab>(ProductTab.OVERVIEW);
@@ -86,7 +86,7 @@ const App: React.FC = () => {
                   <span className="bg-yellow-400 text-blue-900 px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-6 inline-block">Offerta Premium</span>
                   <h2 className="text-6xl font-black mb-6 leading-tight tracking-tighter">Solidità Zurich, Visione Advisor.</h2>
                   <p className="text-xl text-blue-100 mb-10 leading-relaxed font-medium">
-                    Gestione Separata Zurich Trend certificata al 2.87%. Un'opportunità multiramo per bilanciare rendimento finanziario e stabilità assicurativa con bonus fedeltà fino al 2.5%.
+                    Gestione Separata Zurich Trend. Un'opportunità multiramo per bilanciare rendimento finanziario e stabilità assicurativa con bonus fedeltà fino al 2.5%.
                   </p>
                   <div className="flex gap-4">
                      <button onClick={() => setActiveTab(ProductTab.SIMULATOR)} className="bg-white text-blue-900 px-8 py-4 rounded-2xl font-black shadow-lg hover:bg-blue-50 transition-all">Lancia Simulatore</button>
@@ -522,14 +522,14 @@ const App: React.FC = () => {
               {
                 title: "Ottimizzazione Fiscale Professionista",
                 scenario: "Professionista con 50k in CPP A, attiva Sacrifice CF (+1%) e Bonus Campagna (+1%).",
-                solution: "Bonus d'ingresso del 2% che neutralizza i costi di gestione del primo anno. Focus sulla stabilità del Ramo I certificato al 2.87%.",
+                solution: "Bonus d'ingresso del 2% che neutralizza i costi di gestione del primo anno. Focus sulla stabilità del Ramo I.",
                 impact: "Bonus 2% | Stabilità Garantita"
               },
               {
                 title: "Tutela del Patrimonio Immobiliare",
                 scenario: "Liquidità derivante da vendita asset, reinvestita al 70% in GS per creare uno scudo civile.",
                 solution: "Utilizzo della Gestione Separata come 'Asset Class di Protezione' per bilanciare l'esposizione al mercato immobiliare.",
-                impact: "Scudo Civile | Rendimento 2.87%"
+                impact: "Scudo Civile | Solidità Zurich"
               },
               {
                 title: "Life Cycle per il Pensionamento",
